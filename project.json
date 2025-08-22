@@ -1,6 +1,6 @@
 {
   "dependencies": [
-    "funlaby:sjrd/levelledgrounds/local-current"
+    "funlaby:sjrd/leveledgrounds/local-current"
   ],
   "modules": [
     "com.funlabyrinthe.mazes.Mazes",
