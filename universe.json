@@ -1,16 +1,16 @@
 {
   "players": [ "player", ],
   "additionalComponents": {
-    "com.funlabyrinthe.mazes.Mazes:mapCreator": [ "map1", ],
-    "com.funlabyrinthe.mazes.Mazes:transporterCreator": [],
-    "com.funlabyrinthe.mazes.Mazes:boatCreator": [],
-    "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator": [ "levelledGround1", "levelledGround2", "levelledGround3", ],
+    "levelledGround1": "user.sjrd.levelledground.LevelledGround",
+    "levelledGround2": "user.sjrd.levelledground.LevelledGround",
+    "levelledGround3": "user.sjrd.levelledground.LevelledGround",
+    "map1": "com.funlabyrinthe.mazes.Map",
   },
   "components": {
     "com.funlabyrinthe.core.Core:player:com.funlabyrinthe.mazes.Player": {
       "position": [
         [
-          "com.funlabyrinthe.mazes.Mazes:mapCreator:map1",
+          "com.funlabyrinthe.core.AdditionalComponents:map1",
           [ 12, 10, 0, ],
         ],
       ],
@@ -18,43 +18,38 @@
     "com.funlabyrinthe.mazes.Mazes:grass": {
       "editVisualTag": "!",
     },
-    "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround1": {
-      "editVisualTag": "",
-    },
-    "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround2": {
+    "com.funlabyrinthe.core.AdditionalComponents:levelledGround2": {
+      "level": 1,
       "painter": [
         {
           "ImageDescription": "Fields/LowWall",
         },
       ],
-      "editVisualTag": "",
-      "level": 1,
     },
-    "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround3": {
+    "com.funlabyrinthe.core.AdditionalComponents:levelledGround3": {
+      "level": 2,
       "painter": [
         {
           "ImageDescription": "Fields/Wall",
         },
       ],
-      "editVisualTag": "",
-      "level": 2,
     },
-    "com.funlabyrinthe.mazes.Mazes:mapCreator:map1": {
+    "com.funlabyrinthe.core.AdditionalComponents:map1": {
       "map": {
         "dimensions": [ 14, 14, 1, ],
         "palette": [
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround3", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround2", "myfunlaby.MursEtMurets:stepLadder", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround2", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround1", "myfunlaby.MursEtMurets:stepLadder", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:goldenKey", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:silverBlock", ],
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:goldenBlock", ],
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:silverKey", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround2", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:goldenKey", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:plank", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
-          [ "user.sjrd.levelledground.LevelledGrounds:levelledGroundCreator:levelledGround1", "com.funlabyrinthe.mazes.Mazes:treasure", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround3", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround2", "myfunlaby.MursEtMurets:stepLadder", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround2", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround1", "myfunlaby.MursEtMurets:stepLadder", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:goldenKey", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:silverBlock", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:goldenBlock", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:silverKey", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround2", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:goldenKey", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround1", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:plank", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.core.AdditionalComponents:levelledGround1", "com.funlabyrinthe.mazes.Mazes:treasure", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
           [ "com.funlabyrinthe.mazes.Mazes:sky", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
         ],
         "map": [
