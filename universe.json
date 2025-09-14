@@ -19,20 +19,20 @@
       "editVisualTag": "!",
     },
     "com.funlabyrinthe.core.AdditionalComponents:levelledGround2": {
-      "level": 1,
       "painter": [
         {
           "ImageDescription": "Fields/LowWall",
         },
       ],
+      "level": 1,
     },
     "com.funlabyrinthe.core.AdditionalComponents:levelledGround3": {
-      "level": 2,
       "painter": [
         {
           "ImageDescription": "Fields/Wall",
         },
       ],
+      "level": 2,
     },
     "com.funlabyrinthe.core.AdditionalComponents:map1": {
       "map": {

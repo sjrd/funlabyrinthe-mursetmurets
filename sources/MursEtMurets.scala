@@ -35,14 +35,19 @@ class StepLadderPlugin(using ComponentInit) extends PlayerPlugin:
   }
 end StepLadderPlugin
 
-class StepLadder(using ComponentInit) extends CounterEffect:
+class StepLadder(using ComponentInit) extends Effect derives Reflector:
+  var messageShown: Boolean = false
+
   painter += "Ladders/StepLadder"
+
+  override def reflect() = autoReflect[StepLadder]
 
   override def execute(context: MoveContext): Unit = {
     import context.*
     super.execute(context)
-    if isFirstTime(player) then
+    if !messageShown then
       player.showMessage("Ceci est un escabeau")
+      messageShown = true
   }
 
   override def entered(context: MoveContext): Unit = {
