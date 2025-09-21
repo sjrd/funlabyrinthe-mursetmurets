@@ -35,12 +35,10 @@ class StepLadderPlugin(using ComponentInit) extends PlayerPlugin:
   }
 end StepLadderPlugin
 
-class StepLadder(using ComponentInit) extends Effect derives Reflector:
+class StepLadder(using ComponentInit) extends Effect:
   var messageShown: Boolean = false
 
   painter += "Ladders/StepLadder"
-
-  override def reflect() = autoReflect[StepLadder]
 
   override def execute(context: MoveContext): Unit = {
     import context.*
