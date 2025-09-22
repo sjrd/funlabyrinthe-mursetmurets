@@ -3,6 +3,7 @@
     "funlaby:sjrd/leveledgrounds/local-current"
   ],
   "modules": [
+    "com.funlabyrinthe.core.AdditionalComponents",
     "com.funlabyrinthe.mazes.Mazes",
     "user.sjrd.levelledground.LevelledGrounds",
     "myfunlaby.MursEtMurets"

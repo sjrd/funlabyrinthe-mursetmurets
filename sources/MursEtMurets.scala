@@ -6,22 +6,11 @@ import com.funlabyrinthe.mazes.std.*
 
 import user.sjrd.levelledground.*
 
-object MursEtMurets extends Module:
-  override protected def createComponents()(using Universe): Unit =
-    val allTimePlugin = new AllTimePlugin
-    val stepLadderPlugin = new StepLadderPlugin
-    val stepLadder = new StepLadder
-  end createComponents
-  
-  def allTimePlugin(using Universe): AllTimePlugin =
-    myComponentByID("allTimePlugin")
-  def stepLadderPlugin(using Universe): StepLadderPlugin =
-    myComponentByID("stepLadderPlugin")
-  def stepLadder(using Universe): StepLadder =
-    myComponentByID("stepLadder")
-end MursEtMurets
+object MursEtMurets extends Module
 
-export MursEtMurets.*
+@definition def allTimePlugin(using Universe) = new AllTimePlugin
+@definition def stepLadderPlugin(using Universe) = new StepLadderPlugin
+@definition def stepLadder(using Universe) = new StepLadder
 
 class AllTimePlugin(using ComponentInit) extends PlayerPlugin:
   override def perform(player: CorePlayer) = {
