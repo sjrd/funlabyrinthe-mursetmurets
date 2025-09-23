@@ -4,7 +4,7 @@ import com.funlabyrinthe.core.*
 import com.funlabyrinthe.mazes.*
 import com.funlabyrinthe.mazes.std.*
 
-import user.sjrd.levelledground.*
+import user.sjrd.leveledground.*
 
 object MursEtMurets extends Module
 
